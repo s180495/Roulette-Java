@@ -5,12 +5,13 @@ import java.util.Random;
 
 public class Roulette
 {
-    //public static final int MAX_WHEEL_SPINS = 10000000;
+    public static final int MAX_WHEEL_SPINS = 10000000;
     public static final int BLACK = 0;
     public static final int RED = 1;
     
     public static void main(String[] args)
     {
+	/*
         int inputInt;
         
         do
@@ -30,7 +31,7 @@ public class Roulette
         }while (inputInt < 0);
         
         long startTime = System.currentTimeMillis();
-        
+        */
         Random random = new Random();
         int prevRand = random.nextInt(2);
         int[] seqArray = new int[10];
@@ -39,7 +40,7 @@ public class Roulette
         vals[prevRand] = 1;
         int count = 1;
         
-        while (count < inputInt)
+        while (count < MAX_WHEEL_SPINS)//inputInt)
         {
             int rand = random.nextInt(2);
             vals[rand]++;
@@ -72,13 +73,13 @@ public class Roulette
         {
             sb.append(i).append(": ").append(seqArray[i]).append("\n");         
         }
-        
+        /*
         long endTime = System.currentTimeMillis();
         
         long time = endTime - startTime;
         
         sb.append("\nTid: ").append(time).append(" millisekunder.");
-        
+        */
         System.out.println(sb.toString());
     }
 }
