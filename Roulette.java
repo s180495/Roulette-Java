@@ -2,7 +2,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Random;
-import javax.swing.JOptionPane;
 
 public class Roulette
 {
@@ -18,13 +17,11 @@ public class Roulette
         {
             System.out.print("Skriv inn antall spinn (ikke negative tall eller bokstaver): ");
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            //String input = JOptionPane.showInputDialog(null, "Skriv inn antall spinn (ikke negative tall eller bokstaver)");
             
             try
             {
                 String input = br.readLine();
                 inputInt = Integer.parseInt(input);
-                
             }
             catch(IOException | NumberFormatException e)
             {
@@ -82,7 +79,6 @@ public class Roulette
         
         sb.append("\nTid: ").append(time).append(" millisekunder.");
         
-        //JOptionPane.showMessageDialog(null, sb.toString());
         System.out.println(sb.toString());
     }
 }
