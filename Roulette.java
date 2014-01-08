@@ -42,10 +42,10 @@ public class Roulette
         while (count < inputInt)
         {
             int rand = random.nextInt(2);
-            vals[rand] += 1;
+            vals[rand]++;
             
             if (rand == prevRand)
-                seq += 1;
+                seq++;
             else
             {
                 if (seq >= seqArray.length)
@@ -55,7 +55,7 @@ public class Roulette
                     seqArray = temp;
                 }
                 
-                seqArray[seq] +=1;
+                seqArray[seq]++;
                 seq = 1;
             }
             
